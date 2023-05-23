@@ -10,12 +10,26 @@
     }
   }, 0),
     window.addEventListener("DOMContentLoaded", () => {
+      if (null !== document.querySelector("#welcome_subtitle")) {
+        new Typed("#welcome_subtitle", {
+          strings: [
+            "TO AWARD-WINNING STORAGE DRYING AND DISPLAY\n         SYSTEMS FOR YOUR\n         SPORTS\n         EQUIPMENT",
+          ],
+          typeSpeed: 50,
+          startDelay: 2500,
+        });
+      }
       if (null !== document.querySelector(".myProduct-swiper")) {
         new Swiper(".myProduct-swiper", {
-          slidesPerView: 4,
           navigation: {
             nextEl: ".product-swiper-button-next",
             prevEl: ".product-swiper-button-prev",
+          },
+          breakpoints: {
+            1: { slidesPerView: 1.5 },
+            481: { slidesPerView: 2.5 },
+            641: { slidesPerView: 3 },
+            769: { slidesPerView: 4 },
           },
         });
       }
@@ -31,13 +45,13 @@
       if (null !== document.querySelector(".btn-banner")) {
         const e = document.querySelectorAll(".welcome-bg"),
           t = document.querySelectorAll(".btn-banner"),
-          n = document.querySelectorAll(".welcome_content");
-        t.forEach((l) => {
-          l.addEventListener("click", function () {
+          l = document.querySelectorAll(".welcome_content");
+        t.forEach((i) => {
+          i.addEventListener("click", function () {
             t.forEach((e) => {
               e.classList.toggle("active");
             }),
-              n.forEach((e) => {
+              l.forEach((e) => {
                 e.classList.toggle("active");
               }),
               e.forEach((e) => {
@@ -47,64 +61,126 @@
         });
       }
       if (null !== document.querySelector(".advantages-item_btn")) {
-        const l = document.querySelectorAll(".advantages-item_btn"),
-          o = document.querySelectorAll(".advantages_content"),
-          i = document.querySelectorAll(".advantages_img");
-        function c(e) {
-          o.forEach((t, n) => {
-            (t.style.position = n === e ? "relative" : "absolute"),
-              (t.style.visibility = n === e ? "visible" : "hidden"),
-              (t.style.opacity = n === e ? "1" : "0"),
-              (t.style.transition = n === e ? "ease 1s" : "ease 0s");
+        const i = document.querySelectorAll(".advantages-item_btn"),
+          c = document.querySelectorAll(".advantages_content"),
+          s = document.querySelectorAll(".advantages_img");
+        function n(e) {
+          c.forEach((t, l) => {
+            (t.style.position = l === e ? "relative" : "absolute"),
+              (t.style.visibility = l === e ? "visible" : "hidden"),
+              (t.style.opacity = l === e ? "1" : "0"),
+              (t.style.transition = l === e ? "ease 1s" : "ease 0s");
           }),
-            i.forEach((t, n) => {
-              (t.style.position = n === e ? "relative" : "absolute"),
-                (t.style.visibility = n === e ? "visible" : "hidden"),
-                (t.style.opacity = n === e ? "1" : "0"),
-                (t.style.transition = n === e ? "ease 1s" : "ease 0s");
+            s.forEach((t, l) => {
+              (t.style.position = l === e ? "relative" : "absolute"),
+                (t.style.visibility = l === e ? "visible" : "hidden"),
+                (t.style.opacity = l === e ? "1" : "0"),
+                (t.style.transition = l === e ? "ease 1s" : "ease 0s");
             }),
-            l.forEach((t, n) => {
-              t.classList.toggle("active", n === e);
+            i.forEach((t, l) => {
+              t.classList.toggle("active", l === e);
             });
         }
-        c(2),
-          l.forEach((e, t) => {
-            e.addEventListener("click", () => c(t));
+        n(2),
+          i.forEach((e, t) => {
+            e.addEventListener("click", () => n(t));
           });
       }
-      if (null !== document.querySelector(".gallery-item_btn")) {
-        const s = document.querySelectorAll(".gallery-item_btn"),
-          r = document.querySelectorAll(".gallery-item_content");
-        function a(e) {
-          r.forEach((t, n) => {
-            (t.style.position = n === e ? "relative" : "absolute"),
-              (t.style.visibility = n === e ? "visible" : "hidden"),
-              (t.style.opacity = n === e ? "1" : "0"),
-              (t.style.transition = n === e ? "ease 1s" : "ease 0s");
-          }),
-            s.forEach((t, n) => {
-              t.classList.toggle("active", n === e);
-            });
-        }
-        a(2),
-          s.forEach((e, t) => {
-            e.addEventListener("click", () => a(t));
-          });
-      }
-      if (null !== document.querySelector(".footer-item")) {
-        const u = document.querySelectorAll(".footer-item"),
-          d = document.querySelectorAll(".footer-content");
-        u.forEach((e, t) => {
+      if (
+        (document.addEventListener("click", function (e) {
+          let t = e.target;
+          const l = document.querySelector(".burger_menu"),
+            i = document.querySelector(".header_nav"),
+            c = document.querySelector(".header");
+          l.contains(t) &&
+            (l.classList.contains("active")
+              ? (i.classList.toggle("active"),
+                l.classList.toggle("active"),
+                c.classList.remove("black-bg"))
+              : (i.classList.toggle("active"),
+                l.classList.toggle("active"),
+                c.classList.add("black-bg"))),
+            c.contains(t) ||
+              (c.classList.remove("black-bg"),
+              i.classList.remove("active"),
+              l.classList.remove("active"));
+        }),
+        null !== document.querySelector(".btn-back-box"))
+      ) {
+        const o = document.querySelectorAll(".list_item-btn"),
+          a = document.querySelectorAll(".sublist-box");
+        document.querySelectorAll(".btn-back-box").forEach((e, t) => {
           e.addEventListener("click", () => {
             return (
               (e = t),
-              u.forEach((t, n) => {
-                t.classList.toggle("active", n === e);
+              o.forEach((t, l) => {
+                t.classList.remove("active", l === e);
               }),
-              void d.forEach((t, n) => {
+              void a.forEach((t, l) => {
+                t.classList.remove("active", l === e);
+              })
+            );
+            var e;
+          });
+        });
+      }
+      if (null !== document.querySelector(".list_item-btn")) {
+        const r = document.querySelectorAll(".list_item-btn"),
+          u = document.querySelectorAll(".sublist-box");
+        r.forEach((e, t) => {
+          e.addEventListener("click", () => {
+            return (
+              (e = t),
+              r.forEach((t, l) => {
                 t.classList.contains("active")
-                  ? t.classList.remove("active", n === e)
-                  : t.classList.toggle("active", n === e);
+                  ? t.classList.remove("active", l === e)
+                  : t.classList.toggle("active", l === e);
+              }),
+              void u.forEach((t, l) => {
+                t.classList.contains("active")
+                  ? t.classList.remove("active", l === e)
+                  : t.classList.toggle("active", l === e);
+              })
+            );
+            var e;
+          });
+        });
+      }
+      if (null !== document.querySelector(".gallery-item_btn")) {
+        const d = document.querySelectorAll(".gallery-item_btn"),
+          v = document.querySelectorAll(".gallery-item_content");
+        function m(e) {
+          v.forEach((t, l) => {
+            (t.style.position = l === e ? "relative" : "absolute"),
+              (t.style.visibility = l === e ? "visible" : "hidden"),
+              (t.style.opacity = l === e ? "1" : "0"),
+              (t.style.transition = l === e ? "ease 1s" : "ease 0s");
+          }),
+            d.forEach((t, l) => {
+              t.classList.toggle("active", l === e);
+            });
+        }
+        m(2),
+          d.forEach((e, t) => {
+            e.addEventListener("click", () => m(t));
+          });
+      }
+      if (null !== document.querySelector(".footer-item-btn-list")) {
+        const g = document.querySelectorAll(".footer-item-btn-list"),
+          y = document.querySelectorAll(".footer-content");
+        g.forEach((e, t) => {
+          e.addEventListener("click", () => {
+            return (
+              (e = t),
+              g.forEach((t, l) => {
+                t.classList.contains("active")
+                  ? t.classList.remove("active", l === e)
+                  : t.classList.toggle("active", l === e);
+              }),
+              void y.forEach((t, l) => {
+                t.classList.contains("active")
+                  ? t.classList.remove("active", l === e)
+                  : t.classList.toggle("active", l === e);
               })
             );
             var e;
@@ -112,11 +188,11 @@
         });
       }
       if (null !== document.querySelector(".language-list")) {
-        const m = document.querySelector(".language-list");
+        const b = document.querySelector(".language-list");
         document
           .querySelector(".language")
           .addEventListener("click", function () {
-            m.classList.toggle("active");
+            b.classList.toggle("active");
           });
       }
       setTimeout(() => {
@@ -129,7 +205,7 @@
             { threshold: [0.5] }
           ),
           t = document.querySelectorAll(".element-animation");
-        for (let n of t) e.observe(n);
+        for (let l of t) e.observe(l);
       }, 1e3);
     }),
     (window.FLS = !0),
