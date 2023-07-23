@@ -1637,20 +1637,20 @@ ul.breadcrumb li:hover {
 .welcome_title.active {
   opacity: 1;
   position: relative;
+  color: #FFFFFF;
 }
 .welcome_title {
   cursor: pointer;
-  z-index: 1;
+  z-index: 3;
   animation-duration: 2s;
   animation-name: welcome;
   text-align: left;
   font: normal normal bold 48px/30px RobotoMono;
   letter-spacing: 0px;
-  color: #FFFFFF;
+  color: black;
   text-transform: uppercase;
-  opacity: 0;
   text-decoration: underline;
-  position: absolute;
+  position: relative;
 }
 @media (max-width: 47.99875em) {
   .welcome_title {
@@ -1660,22 +1660,22 @@ ul.breadcrumb li:hover {
 .welcome_subtitle.active {
   opacity: 1;
   position: relative;
+  color: #FFFFFF;
 }
 .welcome_subtitle {
   width: 443px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 3;
   animation-duration: 6s;
   animation-name: subwelcome;
   text-align: left;
   font: normal normal bold 18px/20px RobotoMono;
   letter-spacing: 0px;
-  color: #FFFFFF;
+  color: #000000;
   overflow: hidden;
   text-transform: uppercase;
-  opacity: 0;
   max-width: 450px;
-  position: absolute;
+  position: relative;
 }
 @media (max-width: 47.99875em) {
   .welcome_subtitle {
@@ -1698,60 +1698,6 @@ ul.breadcrumb li:hover {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-.content2_welcome-box .welcome_title2.active {
-  opacity: 1;
-  position: relative;
-  z-index: 1;
-}
-.content2_welcome-box .welcome_title2 {
-  cursor: pointer;
-  z-index: -1;
-  text-align: center;
-  font: normal normal bold 48px/30px RobotoMono;
-  letter-spacing: 0px;
-  color: #000000;
-  text-transform: uppercase;
-  opacity: 0;
-  text-decoration: underline;
-  position: absolute;
-}
-@media (max-width: 47.99875em) {
-  .content2_welcome-box .welcome_title2 {
-    font: normal normal bold 38px/40px RobotoMono;
-  }
-}
-.content2_welcome-box .welcome_subtitle2.active {
-  opacity: 1;
-  position: relative;
-  z-index: 1;
-  top: 0;
-  left: 0%;
-}
-.content2_welcome-box .welcome_subtitle2 {
-  cursor: pointer;
-  z-index: -1;
-  top: 0;
-  left: 50%;
-  position: absolute;
-  text-align: center;
-  font: normal normal bold 18px/20px RobotoMono;
-  letter-spacing: 0px;
-  color: #000000;
-  overflow: hidden;
-  text-transform: uppercase;
-  opacity: 0;
-  max-width: 450px;
-}
-@media (max-width: 47.99875em) {
-  .content2_welcome-box .welcome_subtitle2 {
-    font: normal normal bold 16px/20px RobotoMono;
-  }
-}
-@media (max-width: 29.99875em) {
-  .content2_welcome-box .welcome_subtitle2 {
-    font: normal normal bold 14px/18px RobotoMono;
-  }
 }
 
 @keyframes welcome {
@@ -1860,7 +1806,6 @@ ul.breadcrumb li:hover {
   }
 }
 .main_product-swiper .swiper-slide {
-  transition: all 0.5s ease 0s;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -1877,7 +1822,6 @@ ul.breadcrumb li:hover {
   position: relative;
 }
 .main_product-swiper .img-box .swiper-img-2 {
-  transition: all 0.5s ease 0s;
   position: absolute;
   top: 0;
   left: 0;
@@ -1889,9 +1833,7 @@ ul.breadcrumb li:hover {
   transform: scale(1);
 }
 .main_product-swiper .img-box img {
-  transition: all 0.5s ease 0s;
   opacity: 1;
-  transform: scale(0.8);
 }
 .main_product-swiper .img-label {
   height: 100%;
@@ -1956,16 +1898,26 @@ ul.breadcrumb li:hover {
 }
 
 .innovations_block1 {
-  background-image: url("../img/1920x1280px_banner_1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  position: relative;
+}
+.innovations_block1 img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
 }
 .innovations_block2 {
-  background-image: url("../img/1920x1280px_banner_2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  position: relative;
+}
+.innovations_block2 img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
 }
 .innovations_block {
   min-width: 320px;
@@ -1997,6 +1949,7 @@ ul.breadcrumb li:hover {
   }
 }
 .innovations_title {
+  z-index: 1;
   text-align: left;
   font: normal normal bold 38px/40px RobotoMono;
   letter-spacing: 0px;
@@ -2013,6 +1966,7 @@ ul.breadcrumb li:hover {
   }
 }
 .innovations_subtitle {
+  z-index: 1;
   text-align: left;
   font: normal normal bold 18px/36px RobotoMono;
   letter-spacing: 0px;
@@ -2031,6 +1985,10 @@ ul.breadcrumb li:hover {
     font: normal normal bold 14px/36px RobotoMono;
   }
 }
+.innovations_btn {
+  z-index: 1;
+}
+
 .main_banner {
   display: flex;
   flex-wrap: wrap;
@@ -2062,11 +2020,18 @@ ul.breadcrumb li:hover {
 }
 .banner_block1 {
   background-image: url("../img/1545x1920px_banner_1_rental.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  position: relative;
+}
+.banner_block1 img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
 }
 .banner_title {
+  z-index: 1;
   text-align: left;
   font: normal normal bold 28px/32px RobotoMono;
   letter-spacing: 0px;
@@ -2085,17 +2050,32 @@ ul.breadcrumb li:hover {
     font: normal normal bold 18px/22px RobotoMono;
   }
 }
+.banner_btn {
+  z-index: 1;
+}
 .banner_block2 {
   background-image: url("../img/1545x1920px_banner_2_depot.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  position: relative;
+}
+.banner_block2 img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
 }
 .banner_block3 {
   background-image: url("../img/1545x1920px_banner_3_shop.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  position: relative;
+}
+.banner_block3 img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
 }
 
 .banner__container {
@@ -3676,11 +3656,13 @@ ul.breadcrumb li:hover {
   display: flex;
   justify-content: space-between;
   text-align: center;
+  align-items: center;
   gap: 40px;
 }
 .depot-products .filters-list label .icon-chech {
   opacity: 0;
 }
+.depot-products input.filters-item,
 .depot-products .filters-item {
   width: 0px;
   height: 0px;
@@ -3749,7 +3731,6 @@ ul.breadcrumb li:hover {
   opacity: 1;
 }
 .depot-products .depot-products_item .img-box img {
-  transform: scale(0.8);
   transition: all 0.5s ease 0s;
   width: 100%;
   height: 100%;
@@ -4309,6 +4290,7 @@ ul.breadcrumb li:hover {
     width: 100%;
   }
 }
+.product-cart-info-content_characteristics a,
 .product-cart-info-content_characteristics li {
   border-top: #B8B8B8 1px solid;
   max-width: 450px;
@@ -4321,24 +4303,29 @@ ul.breadcrumb li:hover {
   color: #000000;
   opacity: 1;
 }
+.product-cart-info-content_characteristics a.active img,
 .product-cart-info-content_characteristics li.active img {
   transition: all 0.3s ease 0s;
   transform: rotate(270deg);
 }
 @media (max-width: 47.99875em) {
+  .product-cart-info-content_characteristics a,
   .product-cart-info-content_characteristics li {
     max-width: 100%;
     font: normal normal 500 12px/40px RobotoMono;
   }
 }
+.product-cart-info-content_characteristics a .list-arrows-img,
 .product-cart-info-content_characteristics li .list-arrows-img {
   transform: rotate(90deg);
   max-width: 15px;
   max-height: 15px;
 }
+.product-cart-info-content_characteristics a:not(:last-child),
 .product-cart-info-content_characteristics li:not(:last-child) {
   cursor: pointer;
 }
+.product-cart-info-content_characteristics a:last-child,
 .product-cart-info-content_characteristics li:last-child {
   padding-top: 12px;
   display: flex;
@@ -4346,11 +4333,13 @@ ul.breadcrumb li:hover {
   justify-content: flex-start;
   flex-direction: column;
 }
+.product-cart-info-content_characteristics a:last-child > div,
 .product-cart-info-content_characteristics li:last-child > div {
   display: flex;
   gap: 10px;
   white-space: nowrap;
 }
+.product-cart-info-content_characteristics a:last-child img,
 .product-cart-info-content_characteristics li:last-child img {
   transition: all 0.3s ease 0s;
   margin-left: 10px;
@@ -4358,6 +4347,7 @@ ul.breadcrumb li:hover {
   max-width: 30px;
 }
 @media (max-width: 47.99875em) {
+  .product-cart-info-content_characteristics a:last-child img,
   .product-cart-info-content_characteristics li:last-child img {
     max-width: 20px;
     margin-left: 5px;
@@ -4365,6 +4355,7 @@ ul.breadcrumb li:hover {
   }
 }
 @media (max-width: 47.99875em) {
+  .product-cart-info-content_characteristics a:last-child,
   .product-cart-info-content_characteristics li:last-child {
     font: normal normal 500 10px/30px RobotoMono;
   }
