@@ -4165,7 +4165,7 @@
   }
   (() => {
     "use strict";
-    n(80);
+    var t = n(80);
     $(function () {
       if (
         (null !== document.querySelector(".sliq-image_main") &&
@@ -4192,18 +4192,22 @@
           startDelay: 2500,
         });
       }
+      if (null !== document.querySelector(".contact2_list")) {
+        const e = document.querySelector(".contact2_list");
+        t(e);
+      }
       if (null !== document.querySelector(".filter-btn-counter ")) {
-        const t = document.querySelectorAll(".filter-btn-counter ");
-        function e(e) {
-          t.forEach((t, n) => {
-            t.classList.contains("active")
-              ? t.classList.remove("active", n === e)
-              : t.classList.toggle("active", n === e);
+        const n = document.querySelectorAll(".filter-btn-counter ");
+        function o(t) {
+          n.forEach((e, n) => {
+            e.classList.contains("active")
+              ? e.classList.remove("active", n === t)
+              : e.classList.toggle("active", n === t);
           });
         }
-        e(0),
-          t.forEach((t, n) => {
-            t.addEventListener("click", () => e(n));
+        o(0),
+          n.forEach((t, e) => {
+            t.addEventListener("click", () => o(e));
           });
       }
       if (null !== document.querySelector(".mySwiper-milestones"))
@@ -4217,23 +4221,23 @@
           pagination: { el: ".swiper-pagination-milestones" },
         });
       if (null !== document.querySelector(".contact-btn")) {
-        const n = document.querySelectorAll(".contact-btn"),
-          o = document.querySelectorAll(".contact2_content");
-        function i(t) {
-          n.forEach((e, n) => {
+        const i = document.querySelectorAll(".contact-btn"),
+          a = document.querySelectorAll(".contact2_content");
+        function s(t) {
+          i.forEach((e, n) => {
             e.classList.toggle("active", n === t);
           }),
-            o.forEach((e, n) => {
+            a.forEach((e, n) => {
               e.classList.toggle("active", n === t);
             });
         }
-        i(0),
-          n.forEach((t, e) => {
-            t.addEventListener("click", () => i(e));
+        s(0),
+          i.forEach((t, e) => {
+            t.addEventListener("click", () => s(e));
           });
       }
       if (null !== document.querySelector(".product-cart-info_swiper")) {
-        const a = new Swiper(".product-cart-info_swiper", {
+        const r = new Swiper(".product-cart-info_swiper", {
           freeMode: !0,
           watchSlidesProgress: !0,
           breakpoints: {
@@ -4247,11 +4251,11 @@
         new Swiper(".product-cart-info_swiper2", {
           spaceBetween: 10,
           autoHeight: !0,
-          thumbs: { swiper: a },
+          thumbs: { swiper: r },
         });
       }
       if (null !== document.querySelector(".product-cart-info_swiper")) {
-        const s = new Swiper(".product-cart-info_swiper12", {
+        const l = new Swiper(".product-cart-info_swiper12", {
           freeMode: !0,
           watchSlidesProgress: !0,
           breakpoints: {
@@ -4265,11 +4269,11 @@
         new Swiper(".product-cart-info_swiper22", {
           spaceBetween: 10,
           autoHeight: !0,
-          thumbs: { swiper: s },
+          thumbs: { swiper: l },
         });
       }
       if (null !== document.querySelector(".product-cart-info_swiper")) {
-        const r = new Swiper(".product-cart-info_swiper13", {
+        const c = new Swiper(".product-cart-info_swiper13", {
           freeMode: !0,
           watchSlidesProgress: !0,
           breakpoints: {
@@ -4283,11 +4287,11 @@
         new Swiper(".product-cart-info_swiper23", {
           spaceBetween: 10,
           autoHeight: !0,
-          thumbs: { swiper: r },
+          thumbs: { swiper: c },
         });
       }
       if (null !== document.querySelector(".product-cart-info_swiper")) {
-        const l = new Swiper(".product-cart-info_swiper14", {
+        const u = new Swiper(".product-cart-info_swiper14", {
           freeMode: !0,
           watchSlidesProgress: !0,
           breakpoints: {
@@ -4301,7 +4305,7 @@
         new Swiper(".product-cart-info_swiper24", {
           spaceBetween: 10,
           autoHeight: !0,
-          thumbs: { swiper: l },
+          thumbs: { swiper: u },
         });
       }
       if (null !== document.querySelector(".mySwiper-references-more")) {
@@ -4357,49 +4361,49 @@
         });
       }
       if (null !== document.querySelector(".btn-banner")) {
-        const c = document.querySelectorAll(".welcome-bg"),
-          u = document.querySelectorAll(".btn-banner"),
-          f = document.querySelectorAll(".welcome_content");
-        setInterval(d, 7e3);
-        function d() {
-          u.forEach((t) => {
+        const f = document.querySelectorAll(".welcome-bg"),
+          d = document.querySelectorAll(".btn-banner"),
+          h = document.querySelectorAll(".welcome_content");
+        setInterval(m, 7e3);
+        function m() {
+          d.forEach((t) => {
             t.classList.toggle("active");
           }),
-            f.forEach((t) => {
+            h.forEach((t) => {
               t.classList.toggle("active");
             }),
-            c.forEach((t) => {
+            f.forEach((t) => {
               t.classList.toggle("active");
             });
         }
-        u.forEach((t) => {
-          t.addEventListener("click", () => d());
+        d.forEach((t) => {
+          t.addEventListener("click", () => m());
         });
       }
       if (null !== document.querySelector(".advantages-item_btn")) {
-        const h = document.querySelectorAll(".advantages-item_btn"),
-          m = document.querySelectorAll(".advantages_content"),
-          g = document.querySelectorAll(".advantages_img");
-        function p(t) {
-          m.forEach((e, n) => {
+        const g = document.querySelectorAll(".advantages-item_btn"),
+          p = document.querySelectorAll(".advantages_content"),
+          y = document.querySelectorAll(".advantages_img");
+        function v(t) {
+          p.forEach((e, n) => {
             (e.style.position = n === t ? "relative" : "absolute"),
               (e.style.visibility = n === t ? "visible" : "hidden"),
               (e.style.opacity = n === t ? "1" : "0"),
               (e.style.transition = n === t ? "ease 1s" : "ease 0s");
           }),
-            g.forEach((e, n) => {
+            y.forEach((e, n) => {
               (e.style.position = n === t ? "relative" : "absolute"),
                 (e.style.visibility = n === t ? "visible" : "hidden"),
                 (e.style.opacity = n === t ? "1" : "0"),
                 (e.style.transition = n === t ? "ease 1s" : "ease 0s");
             }),
-            h.forEach((e, n) => {
+            g.forEach((e, n) => {
               e.classList.toggle("active", n === t);
             });
         }
-        p(2),
-          h.forEach((t, e) => {
-            t.addEventListener("click", () => p(e));
+        v(2),
+          g.forEach((t, e) => {
+            t.addEventListener("click", () => v(e));
           });
       }
       if (
@@ -4434,16 +4438,16 @@
         }),
         null !== document.querySelector(".btn-back-box"))
       ) {
-        const y = document.querySelectorAll(".list_item-btn"),
-          v = document.querySelectorAll(".sublist-box");
+        const b = document.querySelectorAll(".list_item-btn"),
+          w = document.querySelectorAll(".sublist-box");
         document.querySelectorAll(".btn-back-box").forEach((t, e) => {
           t.addEventListener("click", () => {
             return (
               (t = e),
-              y.forEach((e, n) => {
+              b.forEach((e, n) => {
                 e.classList.remove("active", n === t);
               }),
-              void v.forEach((e, n) => {
+              void w.forEach((e, n) => {
                 e.classList.remove("active", n === t);
               })
             );
@@ -4452,18 +4456,18 @@
         });
       }
       if (null !== document.querySelector(".list_item-btn")) {
-        const b = document.querySelectorAll(".list_item-btn"),
-          w = document.querySelectorAll(".sublist-box");
-        b.forEach((t, e) => {
+        const C = document.querySelectorAll(".list_item-btn"),
+          S = document.querySelectorAll(".sublist-box");
+        C.forEach((t, e) => {
           t.addEventListener("click", () => {
             return (
               (t = e),
-              b.forEach((e, n) => {
+              C.forEach((e, n) => {
                 e.classList.contains("active")
                   ? e.classList.remove("active", n === t)
                   : e.classList.toggle("active", n === t);
               }),
-              void w.forEach((e, n) => {
+              void S.forEach((e, n) => {
                 e.classList.contains("active")
                   ? e.classList.remove("active", n === t)
                   : e.classList.toggle("active", n === t);
@@ -4474,60 +4478,60 @@
         });
       }
       if (null !== document.querySelector(".product-btn-header")) {
-        const C = document.querySelectorAll(".product-btn-header"),
-          S = document.querySelectorAll(".product-content-header");
-        function A(t) {
-          C.forEach((e, n) => {
+        const A = document.querySelectorAll(".product-btn-header"),
+          x = document.querySelectorAll(".product-content-header");
+        function E(t) {
+          A.forEach((e, n) => {
             e.classList.toggle("active", n === t);
           }),
-            S.forEach((e, n) => {
+            x.forEach((e, n) => {
               e.classList.toggle("active", n === t);
             });
         }
-        A(0),
-          C.forEach((t, e) => {
-            t.addEventListener("mouseenter", () => A(e));
+        E(0),
+          A.forEach((t, e) => {
+            t.addEventListener("mouseenter", () => E(e));
           });
       }
       if (null !== document.querySelector(".gallery-item_btn")) {
-        const x = document.querySelectorAll(".gallery-item_btn"),
-          E = document.querySelectorAll(".gallery-item_content"),
-          D = document.querySelectorAll(".gallerry-content-image");
-        function O(t) {
-          D.forEach((e, n) => {
+        const D = document.querySelectorAll(".gallery-item_btn"),
+          O = document.querySelectorAll(".gallery-item_content"),
+          I = document.querySelectorAll(".gallerry-content-image");
+        function T(t) {
+          I.forEach((e, n) => {
             (e.style.position = n === t ? "relative" : "absolute"),
               (e.style.visibility = n === t ? "visible" : "hidden"),
               (e.style.opacity = n === t ? "1" : "0"),
               (e.style.transition = n === t ? "ease 1s" : "ease 0s");
           }),
-            E.forEach((e, n) => {
+            O.forEach((e, n) => {
               (e.style.position = n === t ? "relative" : "absolute"),
                 (e.style.visibility = n === t ? "visible" : "hidden"),
                 (e.style.opacity = n === t ? "1" : "0"),
                 (e.style.transition = n === t ? "ease 1s" : "ease 0s");
             }),
-            x.forEach((e, n) => {
+            D.forEach((e, n) => {
               e.classList.toggle("active", n === t);
             });
         }
-        O(2),
-          x.forEach((t, e) => {
-            t.addEventListener("click", () => O(e));
+        T(2),
+          D.forEach((t, e) => {
+            t.addEventListener("click", () => T(e));
           });
       }
       if (null !== document.querySelector(".footer-item-btn-list")) {
-        const I = document.querySelectorAll(".footer-item-btn-list"),
-          T = document.querySelectorAll(".footer-content");
-        I.forEach((t, e) => {
+        const P = document.querySelectorAll(".footer-item-btn-list"),
+          B = document.querySelectorAll(".footer-content");
+        P.forEach((t, e) => {
           t.addEventListener("click", () => {
             return (
               (t = e),
-              I.forEach((e, n) => {
+              P.forEach((e, n) => {
                 e.classList.contains("active")
                   ? e.classList.remove("active", n === t)
                   : e.classList.toggle("active", n === t);
               }),
-              void T.forEach((e, n) => {
+              void B.forEach((e, n) => {
                 e.classList.contains("active")
                   ? e.classList.remove("active", n === t)
                   : e.classList.toggle("active", n === t);
@@ -4538,74 +4542,74 @@
         });
       }
       if (null !== document.querySelector(".language-list")) {
-        const P = document.querySelector(".language-list");
+        const R = document.querySelector(".language-list");
         document
           .querySelector(".language")
           .addEventListener("click", function () {
-            P.classList.toggle("active");
+            R.classList.toggle("active");
           });
       }
       if (null !== document.querySelector(".filters-list")) {
-        const B = document.querySelector(".filters-list");
+        const N = document.querySelector(".filters-list");
         document
           .querySelector(".filters")
           .addEventListener("click", function () {
-            B.classList.toggle("active");
+            N.classList.toggle("active");
           });
       }
       if (null !== document.querySelector(".counter-items")) {
-        const R = document.querySelector(".counter-item"),
-          N = document.querySelectorAll(".item"),
-          L = document.querySelectorAll(".filter-btn-counter");
-        function F() {
+        const L = document.querySelector(".counter-item"),
+          F = document.querySelectorAll(".item"),
+          M = document.querySelectorAll(".filter-btn-counter");
+        function k() {
           setTimeout(() => {
-            const t = Array.from(N).reduce(
+            const t = Array.from(F).reduce(
               (t, e) =>
                 "none" === window.getComputedStyle(e).display ? t : t + 1,
               0
             );
-            R.innerHTML = t;
+            L.innerHTML = t;
           }, 1e3);
         }
-        F(),
-          L.forEach((t) => {
-            t.addEventListener("click", F);
+        k(),
+          M.forEach((t) => {
+            t.addEventListener("click", k);
           });
       }
       if (null !== document.querySelector(".item-login")) {
-        const M = document.querySelectorAll(".item-login"),
-          k = document.querySelectorAll(".login-popup"),
-          _ = document.querySelectorAll(".login-popup-close"),
-          q = document.body;
-        M.forEach((t, e) => {
+        const _ = document.querySelectorAll(".item-login"),
+          q = document.querySelectorAll(".login-popup"),
+          j = document.querySelectorAll(".login-popup-close"),
+          U = document.body;
+        _.forEach((t, e) => {
           t.addEventListener("click", () => {
             return (
               (t = e),
-              M.forEach((e, n) => {
+              _.forEach((e, n) => {
                 e.classList.toggle("active", n === t);
               }),
-              k.forEach((e, n) => {
+              q.forEach((e, n) => {
                 e.classList.toggle("active", n === t);
               }),
-              k.forEach((t) => {
-                t.classList.contains("active") || (q.style.overflow = "auto");
+              q.forEach((t) => {
+                t.classList.contains("active") || (U.style.overflow = "auto");
               }),
-              void k.forEach((t) => {
-                t.classList.contains("active") && (q.style.overflow = "hidden");
+              void q.forEach((t) => {
+                t.classList.contains("active") && (U.style.overflow = "hidden");
               })
             );
             var t;
           });
         }),
-          _.forEach((t, e) => {
+          j.forEach((t, e) => {
             t.addEventListener("click", () => {
               return (
                 (t = e),
-                k.forEach((e, n) => {
+                q.forEach((e, n) => {
                   e.classList.remove("active", n === t);
                 }),
-                void k.forEach((t) => {
-                  t.classList.contains("active") || (q.style.overflow = "auto");
+                void q.forEach((t) => {
+                  t.classList.contains("active") || (U.style.overflow = "auto");
                 })
               );
               var t;
@@ -4613,39 +4617,39 @@
           });
       }
       if (null !== document.querySelector(".depot-technology_item")) {
-        const j = document.querySelectorAll(".depot-technology_item"),
-          U = document.querySelectorAll(".technology-popup"),
-          H = document.querySelectorAll(".technology-popup-close"),
-          G = document.body;
-        j.forEach((t, e) => {
+        const H = document.querySelectorAll(".depot-technology_item"),
+          G = document.querySelectorAll(".technology-popup"),
+          V = document.querySelectorAll(".technology-popup-close"),
+          W = document.body;
+        H.forEach((t, e) => {
           t.addEventListener("click", () => {
             return (
               (t = e),
-              j.forEach((e, n) => {
+              H.forEach((e, n) => {
                 e.classList.toggle("active", n === t);
               }),
-              U.forEach((e, n) => {
+              G.forEach((e, n) => {
                 e.classList.toggle("active", n === t);
               }),
-              U.forEach((t) => {
-                t.classList.contains("active") || (G.style.overflow = "auto");
+              G.forEach((t) => {
+                t.classList.contains("active") || (W.style.overflow = "auto");
               }),
-              void U.forEach((t) => {
-                t.classList.contains("active") && (G.style.overflow = "hidden");
+              void G.forEach((t) => {
+                t.classList.contains("active") && (W.style.overflow = "hidden");
               })
             );
             var t;
           });
         }),
-          H.forEach((t, e) => {
+          V.forEach((t, e) => {
             t.addEventListener("click", () => {
               return (
                 (t = e),
-                U.forEach((e, n) => {
+                G.forEach((e, n) => {
                   e.classList.remove("active", n === t);
                 }),
-                void U.forEach((t) => {
-                  t.classList.contains("active") || (G.style.overflow = "auto");
+                void G.forEach((t) => {
+                  t.classList.contains("active") || (W.style.overflow = "auto");
                 })
               );
               var t;
@@ -4653,52 +4657,52 @@
           });
       }
       if (null !== document.querySelector(".btn-technology")) {
-        const V = document.querySelectorAll(".btn-technology"),
-          W = document.querySelectorAll(".technology_img-box"),
-          z = document.querySelectorAll(".hotspot-technology"),
-          Y = document.querySelectorAll(".technology-content"),
-          X = document.querySelectorAll(".hotspot-technology2"),
-          K = document.querySelectorAll(".technology-content2");
-        function $(t) {
-          V.forEach((e, n) => {
+        const z = document.querySelectorAll(".btn-technology"),
+          Y = document.querySelectorAll(".technology_img-box"),
+          X = document.querySelectorAll(".hotspot-technology"),
+          K = document.querySelectorAll(".technology-content"),
+          $ = document.querySelectorAll(".hotspot-technology2"),
+          Q = document.querySelectorAll(".technology-content2");
+        function Z(t) {
+          z.forEach((e, n) => {
             e.classList.toggle("active", n === t);
           }),
-            W.forEach((e, n) => {
+            Y.forEach((e, n) => {
               e.classList.toggle("active", n === t);
-            }),
-            Y.forEach((t, e) => {
-              t.classList.remove("active");
             }),
             K.forEach((t, e) => {
               t.classList.remove("active");
             }),
-            X.forEach((t, e) => {
+            Q.forEach((t, e) => {
               t.classList.remove("active");
             }),
-            z.forEach((t, e) => {
+            $.forEach((t, e) => {
+              t.classList.remove("active");
+            }),
+            X.forEach((t, e) => {
               t.classList.remove("active");
             });
         }
-        $(1),
-          V.forEach((t, e) => {
-            t.addEventListener("click", () => $(e));
+        Z(1),
+          z.forEach((t, e) => {
+            t.addEventListener("click", () => Z(e));
           });
       }
       if (null !== document.querySelector(".hotspot-technology2")) {
-        const Q = document.querySelectorAll(".hotspot-technology2"),
-          Z = document.querySelectorAll(".technology-content2"),
-          J = document.querySelectorAll(".technology-button-next2"),
-          tt = document.querySelectorAll(".technology-button-prev2");
-        Q.forEach((t, e) => {
+        const J = document.querySelectorAll(".hotspot-technology2"),
+          tt = document.querySelectorAll(".technology-content2"),
+          et = document.querySelectorAll(".technology-button-next2"),
+          nt = document.querySelectorAll(".technology-button-prev2");
+        J.forEach((t, e) => {
           t.addEventListener("click", () => {
             return (
               (t = e),
-              Z.forEach((e, n) => {
+              tt.forEach((e, n) => {
                 e.classList.contains("active")
                   ? e.classList.remove("active", n === t)
                   : e.classList.toggle("active", n === t);
               }),
-              void Q.forEach((e, n) => {
+              void J.forEach((e, n) => {
                 e.classList.contains("active")
                   ? e.classList.remove("active", n === t)
                   : e.classList.toggle("active", n === t);
@@ -4707,61 +4711,61 @@
             var t;
           });
         }),
-          J.forEach((t, e) => {
+          et.forEach((t, e) => {
             t.addEventListener("click", () => {
               return (
                 (t = e),
-                void (Z.length - 1 <= t
-                  ? (Z.forEach((t, e) => {
+                void (tt.length - 1 <= t
+                  ? (tt.forEach((t, e) => {
                       t.classList.toggle("active", 0 === e);
                     }),
-                    Q.forEach((t, e) => {
+                    J.forEach((t, e) => {
                       t.classList.toggle("active", 0 === e);
                     }))
-                  : (Z.forEach((e, n) => {
+                  : (tt.forEach((e, n) => {
                       e.classList.toggle("active", n === t + 1);
                     }),
-                    Q.forEach((e, n) => {
+                    J.forEach((e, n) => {
                       e.classList.toggle("active", n === t + 1);
                     })))
               );
               var t;
             });
           }),
-          tt.forEach((t, e) => {
+          nt.forEach((t, e) => {
             t.addEventListener("click", () => {
               var t;
               0 == (t = e)
-                ? (Z.forEach((t, e) => {
-                    t.classList.toggle("active", e === Z.length - 1);
+                ? (tt.forEach((t, e) => {
+                    t.classList.toggle("active", e === tt.length - 1);
                   }),
-                  Q.forEach((t, e) => {
-                    t.classList.toggle("active", e === Z.length - 1);
+                  J.forEach((t, e) => {
+                    t.classList.toggle("active", e === tt.length - 1);
                   }))
-                : (Z.forEach((e, n) => {
+                : (tt.forEach((e, n) => {
                     e.classList.toggle("active", n === t - 1);
                   }),
-                  Q.forEach((e, n) => {
+                  J.forEach((e, n) => {
                     e.classList.toggle("active", n === t - 1);
                   }));
             });
           });
       }
       if (null !== document.querySelector(".hotspot-technology")) {
-        const et = document.querySelectorAll(".hotspot-technology"),
-          nt = document.querySelectorAll(".technology-content"),
-          ot = document.querySelectorAll(".technology-button-next"),
-          it = document.querySelectorAll(".technology-button-prev");
-        et.forEach((t, e) => {
+        const ot = document.querySelectorAll(".hotspot-technology"),
+          it = document.querySelectorAll(".technology-content"),
+          at = document.querySelectorAll(".technology-button-next"),
+          st = document.querySelectorAll(".technology-button-prev");
+        ot.forEach((t, e) => {
           t.addEventListener("click", () => {
             return (
               (t = e),
-              nt.forEach((e, n) => {
+              it.forEach((e, n) => {
                 e.classList.contains("active")
                   ? e.classList.remove("active", n === t)
                   : e.classList.toggle("active", n === t);
               }),
-              void et.forEach((e, n) => {
+              void ot.forEach((e, n) => {
                 e.classList.contains("active")
                   ? e.classList.remove("active", n === t)
                   : e.classList.toggle("active", n === t);
@@ -4770,57 +4774,57 @@
             var t;
           });
         }),
-          ot.forEach((t, e) => {
+          at.forEach((t, e) => {
             t.addEventListener("click", () => {
               return (
                 (t = e),
-                void (nt.length - 1 <= t
-                  ? (nt.forEach((t, e) => {
+                void (it.length - 1 <= t
+                  ? (it.forEach((t, e) => {
                       t.classList.toggle("active", 0 === e);
                     }),
-                    et.forEach((t, e) => {
+                    ot.forEach((t, e) => {
                       t.classList.toggle("active", 0 === e);
                     }))
-                  : (nt.forEach((e, n) => {
+                  : (it.forEach((e, n) => {
                       e.classList.toggle("active", n === t + 1);
                     }),
-                    et.forEach((e, n) => {
+                    ot.forEach((e, n) => {
                       e.classList.toggle("active", n === t + 1);
                     })))
               );
               var t;
             });
           }),
-          it.forEach((t, e) => {
+          st.forEach((t, e) => {
             t.addEventListener("click", () => {
               var t;
               0 == (t = e)
-                ? (nt.forEach((t, e) => {
-                    t.classList.toggle("active", e === nt.length - 1);
+                ? (it.forEach((t, e) => {
+                    t.classList.toggle("active", e === it.length - 1);
                   }),
-                  et.forEach((t, e) => {
-                    t.classList.toggle("active", e === nt.length - 1);
+                  ot.forEach((t, e) => {
+                    t.classList.toggle("active", e === it.length - 1);
                   }))
-                : (nt.forEach((e, n) => {
+                : (it.forEach((e, n) => {
                     e.classList.toggle("active", n === t - 1);
                   }),
-                  et.forEach((e, n) => {
+                  ot.forEach((e, n) => {
                     e.classList.toggle("active", n === t - 1);
                   }));
             });
           });
       }
       if (null !== document.querySelector(".seeAlso_btn-box")) {
-        const at = document.querySelectorAll(".seeAlso-btn"),
-          st = document.querySelectorAll(".seeAlso_img");
-        at.forEach((t, e) => {
+        const rt = document.querySelectorAll(".seeAlso-btn"),
+          lt = document.querySelectorAll(".seeAlso_img");
+        rt.forEach((t, e) => {
           t.addEventListener("click", () => {
             return (
               (t = e),
-              at.forEach((e, n) => {
+              rt.forEach((e, n) => {
                 e.classList.toggle("active", n === t);
               }),
-              void st.forEach((e, n) => {
+              void lt.forEach((e, n) => {
                 e.classList.toggle("active", n === t);
               })
             );
